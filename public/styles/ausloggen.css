@@ -1,0 +1,19 @@
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+p{
+    text-align: center;
+    font-size: 195%;
+    font-family: the brooklyn;
+}
+#logobild{
+    max-width:25%;
+    max-height: 25%;
+}
+#login_button{
+    max-width:10%;
+    max-height: 10%;
+}
