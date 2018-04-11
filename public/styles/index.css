@@ -1,7 +1,22 @@
 #logobild{
-    height:300px;
+    max-width:25%;
+    max-height: 25%;
+}
+#login_button{
+    max-width:10%;
+    max-height: 10%;
+}
+#aktivieren_button{
+    max-width:10%;
+    max-height: 10%;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-#aktivieren_button{
-    position: center;
-}
+
+
+
