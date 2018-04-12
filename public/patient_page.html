@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Patient Home Screen</title>
-    <link href="./css/PatientPage.css" type="text/css" rel="stylesheet">
+    <link href="./styles/patient_page.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <div class="Patient">
         <strong>Herr Alfred Müller</strong>
         <p>Patienten ID: 0082 XDF</p>
+        <div class="bgFoto">
+            <img class="Patientenfoto" src="resources/alfredmüller.png">
+        </div>
     </div>
     <br>
     <br>
     <div id="bgFormular" class="Hintergrund">
-        <img src="./img/solid_orange_background.jpg" alt="Der Hintergrund für den Button zum Formular">
-        <button type="button">Beschwerden melden</button>
+        <img src="./resources/formularausfüllen_bild.png" alt="Der Hintergrund für den Button zum Formular">
+        <button id="formular" type="button">Beschwerden melden</button>
     </div>
     <div id="bgAkte" class="Hintergrund">
-        <img src="./img/solid_orange_background.jpg" alt="Der Hintergrund für den Button zur Patientenakte">
-        <button type="button">Patientenakte öffnen</button>
+        <img src="./resources/silhouette_patient_weiß.png" alt="Der Hintergrund für den Button zur Patientenakte">
+        <button id="akte" type="button">Patientenakte öffnen</button>
     </div>
 </body>
 </html>

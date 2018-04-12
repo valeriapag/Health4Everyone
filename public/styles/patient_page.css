@@ -1,40 +1,67 @@
 .Patient strong {
-    font-family: Arial;
+    font-family: the brooklyn;
     color: dimgray;
     font-size: 24px;
 
 }
 
 .Patient p {
-    font-family: Arial;
+    font-family: the brooklyn;
     color: darkgray;
     font-size: 21px;
     margin-top: 12px;
     font-weight: lighter;
 }
 
-.Hintergrund {
-    width: 15%;
-    position: relative;
+.bgFoto {
+    float: right;
+    position: absolute;
+    border-radius: 100%;
+    background: #97C1AB;
+    top: 10px;
+    right: 10px;
 }
 
-.Hintergrund img {
-    width: 240px;
-    height: 470px;
+.Patientenfoto {
+    position: relative;
+    top: -7px;
+    right: 0px;
+}
+
+.Hintergrund {
+    float:left;
+    width: 250px;
+    height: 350px;
+    opacity: 1;
+}
+
+.Hintergrund img{
+    width: 170px;
+    height: 170px;
+    position: relative;
+    top: 7px;
+    left: 42px;
 }
 
 .Hintergrund button {
-    font-family: Arial;
-    text-align: center;
-    font-size: 20px;
+    font-family: the brooklyn;
+    font-size: 16px;
     border-radius: 12px;
     background-color: aliceblue;
     cursor: pointer;
-    padding: 20px 20px;
-    position: absolute;
-    border: none;
-    top: 70%;
-    left: 1%;
+    position: relative;
+}
+
+#formular {
+    top: 48px;
+    left: 2px;
+    padding: 30px 43px;
+}
+
+#akte {
+    top: 48px;
+    left: 1px;
+    padding: 30px 35px;
 }
 
 #bgFormular {
@@ -42,6 +69,8 @@
     left: 2%;
     float: left;
     display: inline;
+    margin-right: 20px;
+    background: #CC8C15;
 }
 
 #bgAkte {
@@ -49,4 +78,13 @@
     left: 5%;
     float: left;
     display: inline;
+    margin-left:20px;
+    background: #3D9599;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
