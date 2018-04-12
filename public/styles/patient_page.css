@@ -1,0 +1,52 @@
+.Patient strong {
+    font-family: Arial;
+    color: dimgray;
+    font-size: 24px;
+
+}
+
+.Patient p {
+    font-family: Arial;
+    color: darkgray;
+    font-size: 21px;
+    margin-top: 12px;
+    font-weight: lighter;
+}
+
+.Hintergrund {
+    width: 15%;
+    position: relative;
+}
+
+.Hintergrund img {
+    width: 240px;
+    height: 470px;
+}
+
+.Hintergrund button {
+    font-family: Arial;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    cursor: pointer;
+    padding: 20px 20px;
+    position: absolute;
+    border: none;
+    top: 70%;
+    left: 1%;
+}
+
+#bgFormular {
+    top: 2%;
+    left: 2%;
+    float: left;
+    display: inline;
+}
+
+#bgAkte {
+    top: 5%;
+    left: 5%;
+    float: left;
+    display: inline;
+}
