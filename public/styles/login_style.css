@@ -1,0 +1,33 @@
+body {font-family: the brooklyn;}
+#logobild{
+    max-width:25%;
+    max-height: 25%;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#login_button{
+    max-width:10%;
+    max-height: 10%;
+}
+input[type=text], input[type=password] {
+    width: 104%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+b{
+    text-align:center;
+    font-family:the brooklyn;
+}
+.center2{
+    margin: auto;
+    width: 16%;
+    padding: 10px;
+    display:block;
+}
