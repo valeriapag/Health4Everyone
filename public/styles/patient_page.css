@@ -1,12 +1,12 @@
 .Patient strong {
-    font-family: Arial;
+    font-family: the brooklyn;
     color: dimgray;
     font-size: 24px;
 
 }
 
 .Patient p {
-    font-family: Arial;
+    font-family: the brooklyn;
     color: darkgray;
     font-size: 21px;
     margin-top: 12px;
@@ -14,17 +14,19 @@
 }
 
 .Hintergrund {
-    width: 15%;
-    position: relative;
+    float:left;
+    width: 250px;
+    height: 350px;
+    background: #CC8C15;
 }
 
 .Hintergrund img {
-    width: 240px;
-    height: 470px;
+    width: 80px;
+    height: 120px;
 }
 
 .Hintergrund button {
-    font-family: Arial;
+    font-family: the brooklyn;
     text-align: center;
     font-size: 20px;
     border-radius: 12px;
@@ -42,6 +44,7 @@
     left: 2%;
     float: left;
     display: inline;
+    margin-right: 20px;
 }
 
 #bgAkte {
@@ -49,4 +52,12 @@
     left: 5%;
     float: left;
     display: inline;
+    margin-left:20px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
