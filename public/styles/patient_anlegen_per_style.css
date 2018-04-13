@@ -1,3 +1,4 @@
+body {font-family: the brooklyn;}
 .bottom_right {
     position: absolute;
     bottom: 8px;
@@ -14,30 +15,51 @@
 #vorname{
     border-style: solid;
     border-width: medium;
-    border-color: #CC8C15;
+    border-color: #D8C5A4;
     border-radius: 5px;
-    height: 40px;
+    height: 45px;
 
 }
 #nachname{
     border-style: solid;
     border-width: medium;
-    border-color: #CC8C15;
+    border-color: #D8C5A4;
     border-radius: 5px;
-    height: 40px;
+    height: 45px;
 }
 #geburtstag{
     border-style: solid;
     border-width: medium;
-    border-color: #CC8C15;
+    border-color: #D8C5A4;
     border-radius: 5px;
-    height: 40px;
+    height: 45px;
 }
 
 #email{
     border-style: solid;
     border-width: medium;
-    border-color: #CC8C15;
+    border-color: #D8C5A4;
     border-radius: 5px;
-    height: 40px;
+    height: 45px;
 }
+.position_female_button{
+    position:relative;
+    top: -6px;
+    right: -126px;
+}
+.maskulin_position_button{
+    position: relative;
+    top: 134px;
+}
+.position_gemischt_button{
+    position: relative;
+    right: -254px;
+    top:-164px;
+}
+p{
+    color: darkgray;
+    position: relative;
+    top:110px;
+    font-size: larger;
+}
+
