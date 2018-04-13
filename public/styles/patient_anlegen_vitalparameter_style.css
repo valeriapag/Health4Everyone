@@ -1,0 +1,59 @@
+.bottom_right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.kopf{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+    max-width: 10%;
+    max-height: 10%;
+}
+.oberkörper{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 13%;
+    position:relative;
+    top:-3px;
+}
+.beine{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 8%;
+    position:relative;
+    top:-3px;
+}
+.rechte_hand {
+    position: relative;
+    top: -416px;
+    right: -781px;
+    height: 97px;
+}
+.linke_hand{
+    position: relative;
+    right: -955px;
+    top: -410px;
+    height: 102px;
+}
+.notizblock{
+    position: relative;
+    top: -848px;
+    right: -1331px;
+    height: 202px;
+    width: 365px;
+}
