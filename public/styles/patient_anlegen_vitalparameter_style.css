@@ -1,7 +1,8 @@
 .bottom_right {
-    position: absolute;
+    position: relative;
     bottom: 8em;
-    right: 16em;
+    right: -114em;
+    top: -59em;
 
 }
 

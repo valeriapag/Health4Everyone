@@ -1,0 +1,79 @@
+body {font-family: the brooklyn;}
+.Arztfoto {
+    position: relative;
+    top: -7px;
+    right: 0px;
+}
+.Arzt strong {
+    font-family: the brooklyn;
+    color: dimgray;
+    font-size: 24px;
+
+}
+
+.Arztfoto p {
+    font-family: the brooklyn;
+    color: darkgray;
+    font-size: 21px;
+    margin-top: 12px;
+    font-weight: lighter;
+}
+.bg_foto {
+    float: right;
+    position: absolute;
+    border-radius: 100%;
+    background: #97C1AB;
+    top: 10px;
+    right: 10px;
+}
+#patient_anlegen {
+    top: 3em;
+    left: 2em;
+    padding: 2em 3em;
+    font-family: the brooklyn;
+    font-size: 16px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    cursor: pointer;
+    position: relative;
+}
+#bgAnlegen {
+    top: 2%;
+    left: 2%;
+    float: left;
+    display: inline;
+    margin-right: 20px;
+    background: #CC8C15;
+    width: 16em;
+    height: 22em;
+}
+.Hintergrund img{
+    width: 170px;
+    height: 170px;
+    position: relative;
+    top: 7px;
+    left: 42px;
+}
+
+
+#bgAkte {
+    top: 5%;
+    left: 5%;
+    float: left;
+    display: inline;
+    margin-left: 20px;
+    background: #3D9599;
+    height: 22em;
+    width: 16em;
+}
+#akte{
+    top: 3em;
+    left: 2em;
+    padding: 2em 2em;
+    font-family: the brooklyn;
+    font-size: 16px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    cursor: pointer;
+    position: relative;
+}
