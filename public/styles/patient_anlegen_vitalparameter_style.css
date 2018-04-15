@@ -1,0 +1,127 @@
+.bottom_right {
+    position: relative;
+    bottom: 8em;
+    right: -114em;
+    top: -59em;
+
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.kopf{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+    max-width: 10em;
+    max-height: 10em;
+}
+.oberkörper{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 18em;
+    position:relative;
+    top:-3px;
+}
+.beine{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 8em;
+    position: relative;
+    top: -6em;
+}
+.rechte_hand {
+    top: -416em;
+    right: -781em;
+    height: 97em;
+}
+.linke_hand{
+    position: relative;
+    right: -955em;
+    top: -410em;
+    height: 102em;
+}
+.notizblock{
+    position: relative;
+    right: -101em;
+    top: -49em;
+    height: 13em;
+
+}
+
+#gehirn{
+    position: relative;
+    top: -45em;
+    right: -2em;
+    height: 6em;
+ }
+
+ #herz{
+     position: relative;
+     top: -55em;
+     right: -23em;
+     height: 5.5em;
+ }
+ #lunge{
+     position: relative;
+     top: -47em;
+     right: -2em;
+     height: 5.5em;
+ }
+ #nieren{
+     position: relative;
+     right: -24em;
+     top: -56em;
+     height: 5.5em;
+ }
+#gehrindaten{
+    border-style: solid;
+    border-width: medium;
+    border-color: #A69376;
+    border-radius: 5px;
+    height: 45px;
+    position: relative;
+    top: -53em;
+    right: -1em;
+}
+
+#herzdaten{
+    border-style: solid;
+    border-width: medium;
+    border-color: #26B6C4;
+    border-radius: 5px;
+    height: 45px;
+    position: relative;
+    top: -64em;
+    right: -26em;
+}
+#lungendaten{
+    border-style: solid;
+    border-width: medium;
+    border-color: #26B6C4;
+    border-radius: 5px;
+    height: 45px;
+    position: relative;
+    top: -56em;
+    right: -1em;
+}
+
+#nierendaten{
+    border-style: solid;
+    border-width: medium;
+    border-color: #C54142;
+    border-radius: 5px;
+    height: 45px;
+    position: relative;
+    top: -67em;
+    right: -27em;
+}

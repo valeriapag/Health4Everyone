@@ -10,16 +10,18 @@ body {font-family: the brooklyn;}
     width: 50%;
 }
 #login_button{
-    max-width:10%;
-    max-height: 10%;
+    max-width: 19em;
+    max-height: 7em;
 }
 input[type=text], input[type=password] {
-    width: 104%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    width: 23em;
+    padding: 1em 1em;
+    margin: 0em 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    position: relative;
+    right: 0em;
 }
 b{
     text-align:center;
