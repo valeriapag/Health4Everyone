@@ -1,9 +1,9 @@
 body {font-family: the brooklyn;}
 .bottom_right {
     position: relative;
-    bottom: -33em;
-    right: -127em;
-
+    bottom: -30em;
+    right: -125em;
+    max-width: 20em;
 }
 .center{
     display: block;
@@ -61,5 +61,8 @@ p{
     position: relative;
     top:-3em;
     font-size: larger;
+}
+#patient_anlegen{
+    max-width: 20em;
 }
 
