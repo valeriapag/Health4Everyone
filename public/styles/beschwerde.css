@@ -1,5 +1,6 @@
 p {
     font-family: the brooklyn;
+    color: #434343;
 }
 
 .bg_überschrift {
@@ -285,4 +286,21 @@ p {
     position: relative;
     top: -1em;
     left: 0.5em;
+}
+
+.link_senden_button {
+    position: absolute;
+    top: 43.8em;
+    right: 15.9em;
+    height: 5em;
+    width: 17.2em;
+}
+
+#senden_button{
+    position: absolute;
+    top: 42em;
+    right: 15em;
+    height: 8em;
+    width: 19em;
+    opacity: 1;
 }
