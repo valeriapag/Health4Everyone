@@ -4,70 +4,108 @@ p {
 
 .bg_überschrift {
     float:left;
-    width: 358px;
-    height: 50px;
+    width: 18em;
+    height: 3em;
     opacity: 1;
     background: #FCCA45;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 1em;
+    left: 3em;
 }
 
 .bg_überschrift span {
     position: relative;
-    left: 30px;
-    font-size: 22px;
+    left: 1em;
+    font-size: 1.5em;
     font-family: the brooklyn;
     font-weight: lighter;
 }
 
 #beschreibung {
     position: absolute;
-    height: 200px;
-    width: 350px;
-    top: 12%;
-    left: 8%;
+    height: 15em;
+    width: 26em;
+    top: 8em;
+    left: 10em;
 }
 
 .bg_ankreuzen {
     position: absolute;
-    width: 356px;
-    height: 100px;
+    width: 22.3em;
+    height: 6em;
     background: #FECB6F;
-    top: 37%;
-    left: 8%;
+    top: 22em;
+    left: 8.2em;
 }
 
 #ja_1_check {
     position: relative;
-    top: 50%;
-    left: 47%;
-    width: 50px;
-    height: 50px;
+    top: 5em;
+    left: 14em;
 }
 
 #nein_1_check {
     position: relative;
-    width: 50px;
-    height: 50px;
-    top: 50%;
-    left: 54%;
+    top: 5em;
+    left: 18em;
 }
 
 #ja_1_p {
     position: relative;
-    top: -7%;
-    left: 45%;
+    top: -1.7em;
+    left: 10em;
+    width: 2em;
 }
 
 #nein_1_p {
     position: relative;
-    top: -42%;
-    left: 66%;
+    top: -4.0em;
+    left: 14em;
+    width: 3em;
 }
 
 #ankreuzen_text {
     position: relative;
-    top: 50%;
-    left: 50%;
+    top: -1em;
+    left: 1em;
+}
+
+#meds_text_1 {
+    position: relative;
+    top: 28em;
+    left: 8.5em;
+}
+
+#meds_text_2 {
+    position: relative;
+    top: 27em;
+    left: 8.5em;
+}
+
+#beschreibung_meds_1 {
+    position: absolute;
+    height: 4em;
+    width: 26em;
+    top: 39em;
+    left: 10em;
+}
+
+#meds_text_3 {
+    position: relative;
+    top: 32em;
+    left: 8.5em;
+}
+
+#meds_text_4 {
+    position: relative;
+    top: 31em;
+    left: 8.5em;
+}
+
+#beschreibung_meds_2 {
+    position: absolute;
+    height: 4em;
+    width: 26em;
+    top: 49em;
+    left: 10em;
 }
