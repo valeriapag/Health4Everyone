@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutzerprofil suchen</title>
+    <link href="styles/nutzerprofil_öffnen_style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<img src="resources/nutzerprofil_suchen.png" id="nutzerprofil_suchen" alt="Kategorie Nutzerprofil suchen">
+
+<br>
+<br>
+<br>
+<input type="text" id="nutzer_id" name="nutzer_id" placeholder="Nutzer ID" class="center">
+<br>
+<input type="text" id="nutzername" name="nutzername" placeholder="Name des Nutzers" class="center">
+
+<form>
+    <input type="image" id="weiter_button" src="resources/button_weiter_blau.png" alt="weiter button" class="bottom_right">
+</form>
+
+<p class="center">Status des Nutzers</p>
+
+<div class="dropdown" id="center">
+    <button class="dropbtn">Status Nutzer</button>
+    <div class="dropdown-content">
+        <a href="#">Arzt</a>
+        <a href="#">Patient</a>
+        <a href="#">Informatiker</a>
+    </div>
+</div>
+<br>
+<div class="center">
+    <form>
+        <input type="image" id="male" src="resources/maleblau.png" alt="maskulin geschlecht" class="maskulin_position_button">
+    </form>
+    <form>
+        <input type="image" id="female" src="resources/femaleblau.png" alt="feminin geschlecht" class ="position_female_button">
+    </form>
+    <form>
+        <input type="image" id="gemischt" src="resources/gemischtblau.png" alt="gemischt geschlecht" class="position_gemischt_button">
+    </form>
+
+</div>
+</body>
+</html>
