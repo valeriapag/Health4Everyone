@@ -52,6 +52,7 @@ body {font-family: the brooklyn;}
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 0.5em;
 }
 
 .dropdown {
@@ -82,5 +83,11 @@ body {font-family: the brooklyn;}
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3D9599;
+    background-color: #97C1AB;
+}
+#center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
