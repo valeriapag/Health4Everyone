@@ -109,3 +109,180 @@ p {
     top: 49em;
     left: 10em;
 }
+
+.bg_infection {
+    position: absolute;
+    width: 22.3em;
+    height: 6em;
+    background: #FECB6F;
+    top: 6.7em;
+    left: 33.2em;
+}
+
+#ja_2_check {
+    position: relative;
+    top: 5em;
+    left: 14em;
+}
+
+#nein_2_check {
+    position: relative;
+    top: 5em;
+    left: 18em;
+}
+
+#ja_2_p {
+    position: relative;
+    top: -1.7em;
+    left: 10em;
+    width: 2em;
+}
+
+#nein_2_p {
+    position: relative;
+    top: -4.0em;
+    left: 14em;
+    width: 3em;
+}
+
+#infection_text {
+    position: relative;
+    top: -1em;
+    left: 0.5em;
+}
+
+.bg_contact {
+    position: absolute;
+    width: 22.3em;
+    height: 6em;
+    background: #FECB6F;
+    top: 14.3em;
+    left: 33.2em;
+}
+
+#ja_3_check {
+    position: relative;
+    top: 5em;
+    left: 14em;
+}
+
+#nein_3_check {
+    position: relative;
+    top: 5em;
+    left: 18em;
+}
+
+#ja_3_p {
+    position: relative;
+    top: -1.7em;
+    left: 10em;
+    width: 2em;
+}
+
+#nein_3_p {
+    position: relative;
+    top: -4.0em;
+    left: 14em;
+    width: 3em;
+}
+
+#contact_text {
+    position: relative;
+    top: -1em;
+    left: 0.5em;
+}
+
+.bg_beschwerden {
+    position: absolute;
+    width: 22.3em;
+    height: 6em;
+    background: #FECB6F;
+    top: 22.3em;
+    left: 33.2em;
+}
+
+#tage_1_check {
+    position: relative;
+    top: 5em;
+    left: 9em;
+}
+
+#tage_2_check {
+    position: relative;
+    top: 5em;
+    left: 16em;
+}
+
+#tage_3_check {
+    position: relative;
+    top: 5em;
+    left: 20.5em;
+}
+
+#tage_1 {
+    position: relative;
+    top: -1.7em;
+    left: 1em;
+    width: 2em;
+}
+
+#tage_2 {
+    position: relative;
+    top: -1.75em;
+    left: 2.5em;
+    width: 3em;
+}
+
+#tage_3 {
+    position: relative;
+    top: -1.75em;
+    left: 3.6em;
+    width: 3em;
+}
+
+#beschwerden_text {
+    position: relative;
+    top: -1em;
+    left: 0.5em;
+}
+
+.bg_termin {
+    position: absolute;
+    width: 22.3em;
+    height: 6em;
+    background: #FECB6F;
+    top: 30.3em;
+    left: 33.2em;
+}
+
+#ja_4_check {
+    position: relative;
+    top: 5em;
+    left: 14em;
+}
+
+#nein_4_check {
+    position: relative;
+    top: 5em;
+    left: 18em;
+}
+
+#ja_4_p {
+    position: relative;
+    top: -1.7em;
+    left: 10em;
+    width: 2em;
+}
+
+#nein_4_p {
+    position: relative;
+    top: -4.0em;
+    left: 14em;
+    width: 3em;
+}
+
+#termin_text {
+    position: relative;
+    top: -1em;
+    left: 0.5em;
+}

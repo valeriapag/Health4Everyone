@@ -10,11 +10,11 @@
         <span>Beschwerden melden</span>
     </div>
     <form>
-        <input name="desc" id="beschreibung" type="text" value="Bitte beschreiben sie kurz ihre Beschwerden hier.">
+        <input title="desc" id="beschreibung" type="text" value="Bitte beschreiben sie kurz ihre Beschwerden hier.">
     </form>
     <div class="bg_ankreuzen">
-        <input type="checkbox" id="ja_1_check">
-        <input type="checkbox" id="nein_1_check">
+        <input title="check" type="checkbox" id="ja_1_check">
+        <input title="check" type="checkbox" id="nein_1_check">
         <p id="ankreuzen_text">Haben sie in letzter Zeit neue Medikamente eingenommen?</p>
         <p id="ja_1_p">Ja</p>
         <p id="nein_1_p">Nein</p>
@@ -23,13 +23,43 @@
         <p id="meds_text_1">Falls sie mit Ja geantwortet haben,</p>
         <p id="meds_text_2">welche Medikamente waren es?</p>
         <form>
-            <input name="desc_meds_1" id="beschreibung_meds_1" type="text" value="Bitte hier die Medikamente eintragen.">
+            <input title="desc_meds_1" id="beschreibung_meds_1" type="text" value="Bitte hier die Medikamente eintragen.">
         </form>
         <p id="meds_text_3">Weswegen haben sie die Medikamente</p>
         <p id="meds_text_4">eingenommen?</p>
         <form>
-            <input name="desc_meds_2" id="beschreibung_meds_2" type="text" value="Bitte hier den Grund der Einnahme eintragen.">
+            <input title="desc_meds_2" id="beschreibung_meds_2" type="text" value="Bitte hier den Grund der Einnahme eintragen.">
         </form>
+    </div>
+    <div class="bg_infection">
+        <input title="check" type="checkbox" id="ja_2_check">
+        <input title="check" type="checkbox" id="nein_2_check">
+        <p id="infection_text">Waren sie in letzter Zeit erkältet oder haben sie an Fieber gelitten?</p>
+        <p id="ja_2_p">Ja</p>
+        <p id="nein_2_p">Nein</p>
+    </div>
+    <div class="bg_contact">
+        <input title="check" type="checkbox" id="ja_3_check">
+        <input title="check" type="checkbox" id="nein_3_check">
+        <p id="contact_text">Haben sie schon einmal wegen denselben Beschwerden einen Arzt kontaktiert?</p>
+        <p id="ja_3_p">Ja</p>
+        <p id="nein_3_p">Nein</p>
+    </div>
+    <div class="bg_beschwerden">
+        <input title="check" type="checkbox" id="tage_1_check">
+        <input title="check" type="checkbox" id="tage_2_check">
+        <input title="check" type="checkbox" id="tage_3_check">
+        <p id="beschwerden_text">Wie lange haben sie ihre Beschwerden schon?</p>
+        <span id="tage_1">&lt;2 - 3 Tage</span>
+        <span id="tage_2">4 - 7 Tage</span>
+        <span id="tage_3">&gt; 7 Tage</span>
+    </div>
+    <div class="bg_termin">
+        <input title="check" type="checkbox" id="ja_4_check">
+        <input title="check" type="checkbox" id="nein_4_check">
+        <p id="termin_text">Wünschen Sie einen Termin bei ihrem behandelnden Arzt?</p>
+        <p id="ja_4_p">Ja</p>
+        <p id="nein_4_p">Nein</p>
     </div>
 </body>
 </html>
