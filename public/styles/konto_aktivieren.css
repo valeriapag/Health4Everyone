@@ -1,0 +1,53 @@
+p {
+    font-family: the brooklyn;
+    color: #434343;
+}
+
+.bg_überschrift {
+    float:left;
+    width: 18em;
+    height: 3em;
+    opacity: 1;
+    background: #FCCA45;
+    position: absolute;
+    top: 1em;
+    left: 3em;
+}
+
+.bg_überschrift p {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: lighter;
+    top: -1em;
+    left: 2em;
+}
+
+.nutzer_daten {
+    position: relative;
+    top: 17em;
+    left: 3em;
+}
+
+.nutzer_daten input {
+    position: relative;
+    top: 1em;
+    left: 13em;
+    height: 3em;
+    width: 21em;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+    font-size: 1.5em;
+}
+
+.weiter {
+    position: relative;
+    top: 40em;
+    left: 69.3em;
+}
+
+.weiter img {
+    height: 7em;
+    width: 19em;
+}
