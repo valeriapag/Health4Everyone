@@ -28,10 +28,10 @@ body {font-family: the brooklyn;}
 }
 #patient_anlegen {
     top: 3em;
-    left: 2em;
+    left: 0.5em;
     padding: 2em 3em;
     font-family: the brooklyn;
-    font-size: 16px;
+    font-size: 16.5px;
     border-radius: 12px;
     background-color: aliceblue;
     cursor: pointer;
@@ -52,7 +52,7 @@ body {font-family: the brooklyn;}
     height: 170px;
     position: relative;
     top: 7px;
-    left: 42px;
+    left: 41px;
 }
 
 
@@ -68,7 +68,7 @@ body {font-family: the brooklyn;}
 }
 #akte{
     top: 3em;
-    left: 2em;
+    left: 0.35em;
     padding: 2em 2em;
     font-family: the brooklyn;
     font-size: 16px;

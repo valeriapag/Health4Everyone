@@ -9,7 +9,9 @@ body {font-family: the brooklyn;}
     border-color: #3D9599;
     border-radius: 1em;
     height: 4em;
-
+    width: 28em;
+    position: relative;
+    left: -12.5em;
 }
 
 #nutzername{
@@ -18,12 +20,17 @@ body {font-family: the brooklyn;}
     border-color: #3D9599;
     border-radius: 1em;
     height: 4em;
+    width: 28em;
+    position: relative;
+    left: -12.5em;
 }
 .center{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    position: relative;
+    left: 7em;
 }
 .bottom_right {
     position: relative;
@@ -89,5 +96,6 @@ body {font-family: the brooklyn;}
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 8em;
+    left: -18.3em;
 }

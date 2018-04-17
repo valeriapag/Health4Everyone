@@ -18,7 +18,7 @@ body {font-family: the brooklyn;}
 
 #nutzer_anlegen {
     top: 3em;
-    left: 2em;
+    left: 1em;
     padding: 2em 3em;
     font-family: the brooklyn;
     font-size: 16px;
@@ -57,7 +57,7 @@ body {font-family: the brooklyn;}
 }
 #akte{
     top: 3em;
-    left: 2em;
+    left: 0.4em;
     padding: 2em 2em;
     font-family: the brooklyn;
     font-size: 16px;
