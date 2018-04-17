@@ -2,7 +2,7 @@ body {font-family: the brooklyn;}
 .bottom_right {
     position: relative;
     bottom: 8em;
-    top: 49em;
+    top: 29em;
     right: -117em;
 
 }
@@ -14,6 +14,8 @@ body {font-family: the brooklyn;}
 
     max-width: 10em;
     max-height: 10em;
+    position: relative;
+    top: -24em;
 }
 
 
@@ -24,7 +26,7 @@ body {font-family: the brooklyn;}
     width: 50%;
     max-width: 18em;
     position:relative;
-    top:-3px;
+    top: -24em;
 }
 .beine{
     display: block;
@@ -33,7 +35,7 @@ body {font-family: the brooklyn;}
     width: 50%;
     max-width: 8em;
     position: relative;
-    top: -6em;
+    top: -30em;
 }
 .rechte_hand {
     top: -416em;
@@ -55,33 +57,33 @@ body {font-family: the brooklyn;}
 .notizblock{
     position: relative;
     right: -112em;
-    top: -61em;
+    top: -80em;
     height: 13em;
 
 }
 #gehirn{
     position: relative;
-    top: -56em;
+    top: -72em;
     right: -2em;
     height: 6em;
 }
 
 #herz{
     position: relative;
-    top: -65em;
+    top: -81em;
     right: -23em;
     height: 5.5em;
 }
 #lunge{
     position: relative;
-    top: -57em;
+    top: -73em;
     right: -2em;
     height: 5.5em;
 }
 #nieren{
     position: relative;
     right: -24em;
-    top: -66em;
+    top: -82em;
     height: 5.5em;
 }
 #gehrindaten{
@@ -91,7 +93,7 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -66em;
+    top: -86em;
     right: -1em;
 }
 
@@ -102,7 +104,7 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -77em;
+    top: -97em;
     right: -26em;
 }
 #lungendaten{
@@ -112,7 +114,7 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -67em;
+    top: -86em;
     right: -1em;
 }
 
@@ -123,12 +125,12 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -78em;
+    top: -97em;
     right: -27em;
 }
 .patientennotiz{
     position: relative;
-    top: -52em;
+    top: -74em;
     right: -112em;
 }
 #p{
