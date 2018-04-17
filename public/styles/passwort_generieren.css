@@ -22,18 +22,29 @@ p {
     left: 2em;
 }
 
+.button_generate {
+    position: relative;
+    top: 5em;
+    left: 44.3em;
+}
+
+.button_generate img {
+    height: 5em;
+    width: 5em;
+}
+
 .generate {
     position: relative;
-    top: 2em;
+    top: 4em;
     left: 2em;
 }
 
 .generate input {
     position: relative;
-    top: 1em;
-    left: 13em;
-    height: 4em;
-    width: 24em;
+    top: 2em;
+    left: 9em;
+    height: 2em;
+    width: 17em;
     border-top-style: none;
     border-right-style: none;
     border-bottom-style: solid;
@@ -41,25 +52,31 @@ p {
     font-size: 1.5em;
 }
 
-.email {
+#akt_pass_senden {
     position: relative;
-    top: 2em;
-    left: 2em;
+    top: 5em;
+    left: 19.5em;
 }
 
-.email input {
+.email {
+    position: relative;
+    top: 10em;
+    left: 5.5em;
+}
+
+.email textarea {
     position: relative;
     top: 1em;
     left: 13em;
-    height: 4em;
-    width: 24em;
+    height: 13em;
+    width: 22em;
     font-size: 1.5em;
 }
 
 .senden {
     position: relative;
-    top: -6em;
-    left: 64.3em;
+    top: 23em;
+    left: 68.3em;
 }
 
 .senden img {
