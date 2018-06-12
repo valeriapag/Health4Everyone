@@ -13,7 +13,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 //Variable zum Speichern der Daten aus der Datenbank
 var patienten = [];
-
+0
 /*
 	- Funktion für Requests/Responses.
 	- In diesem Fall wird sie aufgerufen, wenn das "patienten" Dokument angefordert wird.
@@ -45,3 +45,4 @@ app.get("/patienten", function(req, res) {
 app.listen(8080, function() {
     console.log("Listening on port 8080");
 });
+
