@@ -1,0 +1,35 @@
+<!--Template fuer die Patienten Tabelle-->
+<!--#if Helper prueft hier ob Daten vorhanden sind-->
+<!--#each Helper iteriert durch die einzelnen dictionaries-->
+<div class="container_2a">
+    <div class="col">
+        <div class="row-md-14">
+            {{#if patienten}}
+                <div class="table-responsive">
+                    <table id="patienten">
+                        <thead>
+                            <th>ID</th>
+                            <th>Vorname</th>
+                            <th>Nachname</th>
+                            <th>Alter</th>
+                            <th>Geschlecht</th>
+                            <th>Krankheit</th>
+                        </thead>
+                        <tbody>
+                            {{#each patienten}}
+                                <tr>
+                                    <td>{{id}}</td>
+                                    <td>{{vorname}}</td>
+                                    <td>{{nachname}}</td>
+                                    <td>{{alter}}</td>
+                                    <td>{{geschlecht}}</td>
+                                    <td>{{krankheit}}</td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</div>
