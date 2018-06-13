@@ -18,14 +18,16 @@
 
 <br>
 <br>
-<div id="bgAnlegen" class="Hintergrund">
+<div id="bgAnlegen" class="Hintergrund"> <!--Container mit CSS Hintergrundeinstellungen für Patienten anlegen-->
     <img src="./resources/silhouette_patient_weiß.png" alt="Der Hintergrund für Patient anlegen">
-    <button id="patient_anlegen" type="button">Patient anlegen</button>
+    <form action="patient_anlegen_per_daten.html">
+        <button onClick="location.href='patient_anlegen_per_daten.html'"  id="patient_anlegen" type="button">Patient anlegen</button>
+    </form>
 </div>
 
-<div id="bgAkte" class="Hintergrund">
+<div id="bgAkte" class="Hintergrund"><!--Container mit CSS Hintergrundeinstellungen für Patientenakte öffnen-->
     <img src="./resources/silhouette_patient_weiß.png" alt="Der Hintergrund für den Button zur Patientenakte">
-    <button id="akte" type="button">Patientenakte öffnen</button>
+    <button onClick="location.href='patientenakte_suchen.html'" id="akte" type="button">Patientenakte öffnen</button>
 </div>
 </body>
 </html>
