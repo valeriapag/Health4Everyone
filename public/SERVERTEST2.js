@@ -13,17 +13,42 @@ MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', {useNewUrlParser: true}, 
     //Ausgabe falls Db erstellt
     console.log("Database Ourdb created!");
     //Erstelle Variable zum Zugriff auf Db für spätere Operationen
-    ourdb = db.db("Ourdb");
+    var ourdb = db.db("Ourdb");
     //Erstelle Collection "patienten", "arzt" und "meti"
     ourdb.createCollection("patient", function(err, db) {
         console.log("Collection patient erstellt");
+
+        ourdb.createCollection("arzt", function(err, db){
+            console.log("Collection arzt erstellt");
+
+            ourdb.createCollection("meti", function(err, db) {
+                console.log("Collection meti erstellt");
+
+
+                var pw = '1234';
+                var HASH = crypto.createHash('md5').update(pw).digest('hex');
+                var metiNew = {
+                    'vname' : 'Gustav',
+                    'nname' : 'Peterson',
+                    'alter' : 25,
+                    'geschlecht' : 'm',
+                    'uname' : 'gPeterson',
+                    'pwHash' : HASH,
+                };
+                ourdb.collection('meti').insertOne(metiNew, function (err, db) {
+                    db.close();
+                    console.log("The end");
+                });
+            });
+
+
+        });
+
+
+
     });
-    ourdb.createCollection("arzt", function(err, db){
-        console.log("Collection arzt erstellt");
-    });
-    ourdb.createCollection("meti", function(err, db) {
-        console.log("Collection meti erstellt");
-    });
+
+
 
     /*
     var patientNeu = {
@@ -41,16 +66,5 @@ MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', {useNewUrlParser: true}, 
         'arztID' : null
     };
     */
-    var pw = '1234';
-    var HASH = crypto.createHash('md5').update(pw).digest('hex');
-    var metiNew = {
-        'vname' : 'Gustav',
-        'nname' : 'Peterson',
-        'alter' : 25,
-        'geschlecht' : 'm',
-        'uname' : 'gPeterson',
-        'pwHash' : HASH,
-    };
-    ourdb.collection('meti').insertOne(metiNew);
-    db.close();
+
 });
