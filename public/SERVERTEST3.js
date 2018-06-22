@@ -44,57 +44,77 @@ app.post("/login_page", function(req, res) {
     //console.log(req.body.psw);
     if (req.body.uname && req.body.psw) {
         if (req.session.UID) {
-            console.log("Bereits eingeloggt!");
-            res.redirect("")
+            console.log("Bereits eingeloggt als " + req.session.status);
+            res.redirect("/" + req.session.status + "_page");
         }
-        MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', {useNewUrlParser: true}, async function (error, db) {
-            //Fehler wird abgefangen
-            try {
-                //Erstelle Variable zum Zugriff auf Db für spätere Operationen
-                ourdb = await db.db("Ourdb");
-                //console.log('POSTED');
-                var checkHASH = await String(crypto.createHash('md5').update(req.body.psw).digest('hex'));
-                //console.log(checkHASH);
-                var meti_count = await ourdb.collection('meti').find({'pwHash': checkHASH, 'uname': String(req.body.uname)}).count();
-                var patient_count = await ourdb.collection('patient').find({'pwHash': checkHASH, 'uname': String(req.body.uname)}).count();
-                var arzt_count = await ourdb.collection('arzt').find({'pwHash': checkHASH, 'uname': String(req.body.uname)}).count();
-                var meti_ID = await ourdb.collection('meti').find({'pwHash': checkHASH, 'uname': String(req.body.uname)}).toArray();
-                meti_ID = meti_ID[0].metiID;
-                var patient_ID = await ourdb.collection('meti').find({'pwHash': checkHASH, 'uname': String(req.body.uname)}).toArray();
-                patient_ID = patient_ID[0].patientID;
-                var arzt_ID = await ourdb.collection('meti').find({'pwHash': checkHASH, 'uname': String(req.body.uname)}).toArray();
-                arzt_ID = arzt_ID[0].arztID;
-                //console.log(await ourdb.collection('meti').find({'pwHASH': checkHASH, 'uname': req.body.uname}));
-                if (await meti_count >= 1) {
-                    req.session.status = 'meti';
-                    req.session.UID = meti_ID;
-                    await console.log("FUNZT meti");
-                    await console.log(req.session);
-                    res.redirect('/meti_page');
+        else {
+            MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
+                //Fehler wird abgefangen
+                try {
+                    //Erstelle Variable zum Zugriff auf Db für spätere Operationen
+                    ourdb = await db.db("Ourdb");
+                    //console.log('POSTED');
+                    var checkHASH = await String(crypto.createHash('md5').update(req.body.psw).digest('hex'));
+                    //console.log(checkHASH);
+                    var meti_count = await ourdb.collection('meti').find({
+                        'pwHash': checkHASH,
+                        'uname': String(req.body.uname)
+                    }).count();
+                    var patient_count = await ourdb.collection('patient').find({
+                        'pwHash': checkHASH,
+                        'uname': String(req.body.uname)
+                    }).count();
+                    var arzt_count = await ourdb.collection('arzt').find({
+                        'pwHash': checkHASH,
+                        'uname': String(req.body.uname)
+                    }).count();
+                    //console.log(await ourdb.collection('meti').find({'pwHASH': checkHASH, 'uname': req.body.uname}));
+                    if (await meti_count >= 1) {
+                        var meti_ID = await ourdb.collection('meti').find({
+                            'pwHash': checkHASH,
+                            'uname': String(req.body.uname)
+                        }).toArray();
+                        meti_ID = await meti_ID[0].metiID;
+                        req.session.status = 'meti';
+                        req.session.UID = meti_ID;
+                        await console.log("FUNZT meti");
+                        await console.log(req.session);
+                        res.redirect('/meti_page');
+                    }
+                    else if (await patient_count >= 1) {
+                        var patient_ID = await ourdb.collection('patient').find({
+                            'pwHash': checkHASH,
+                            'uname': String(req.body.uname)
+                        }).toArray();
+                        patient_ID = await patient_ID[0].patientID;
+                        req.session.status = 'patient';
+                        req.session.UID = patient_ID;
+                        await console.log('FUNZT patient');
+                        await console.log(req.session);
+                        res.redirect('/patient_page');
+                    }
+                    else if (await arzt_count >= 1) {
+                        var arzt_ID = await ourdb.collection('arzt').find({
+                            'pwHash': checkHASH,
+                            'uname': String(req.body.uname)
+                        }).toArray();
+                        arzt_ID = await arzt_ID[0].arztID;
+                        req.session.status = 'arzt';
+                        req.session.UID = arzt_ID;
+                        await console.log('FUNZT patient');
+                        await console.log(req.session);
+                        res.redirect('/arzt_page');
+                    }
+                    else {
+                        await res.redirect('back');
+                    }
+                    await db.close();
                 }
-                else if (await patient_count >= 1) {
-                    req.session.status = 'patient';
-                    req.session.UID = patient_ID;
-                    await console.log('FUNZT patient');
-                    await console.log(req.session);
-                    res.redirect('/patient_page');
+                catch (error) {
+                    throw await error;
                 }
-                else if (await arzt_count >= 1) {
-                    req.session.status = 'arzt';
-                    req.session.UID = arzt_ID;
-                    await console.log('FUNZT patient');
-                    await console.log(req.session);
-                    res.redirect('/arzt_page');
-                }
-                else {
-                    await res.redirect('back');
-                }
-                await db.close();
-            }
-            catch (error) {
-                throw error;
-            }
-        });
+            });
+        }
     }
 });
 
