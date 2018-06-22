@@ -26,7 +26,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', {useNewUrlParser: true}, 
 
 
                 var pw = '1234';
-                var HASH = crypto.createHash('md5').update(pw).digest('hex');
+                var HASH = String(crypto.createHash('md5').update(pw).digest('hex'));
                 var metiNew = {
                     'vname' : 'Gustav',
                     'nname' : 'Peterson',
