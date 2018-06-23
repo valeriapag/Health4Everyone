@@ -42,7 +42,13 @@ body {font-family: the brooklyn;}
     border-radius: 1em;
     height: 4em;;
 }
-
+#krankheit{
+    border-style: solid;
+    border-width: medium;
+    border-color: #D8C5A4;
+    border-radius: 1em;
+    height: 4em;;
+}
 
 
 p{
@@ -58,6 +64,10 @@ p{
 
 .dropdown_geschlehter{
     position: relative;
-
     right: -30em;
+    background: #CC8C15;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1em;
+    top: -3em;
 }
