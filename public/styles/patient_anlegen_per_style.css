@@ -42,20 +42,9 @@ body {font-family: the brooklyn;}
     border-radius: 1em;
     height: 4em;;
 }
-.position_female_button{
-    position:relative;
-    top: -13em;
-    right: -11em;
-}
-.maskulin_position_button{
-    position: relative;
-    top: -2em;
-}
-.position_gemischt_button{
-    position: relative;
-    right: -21em;
-    top: -25em;
-}
+
+
+
 p{
     color: darkgray;
     position: relative;
@@ -66,3 +55,9 @@ p{
     max-width: 20em;
 }
 
+
+.dropdown_geschlehter{
+    position: relative;
+
+    right: -30em;
+}

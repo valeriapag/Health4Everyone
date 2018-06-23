@@ -6,29 +6,36 @@ body {font-family: the brooklyn;}
     right: -117em;
 
 }
-.kopf{
-    display: block;
+#kopf{
+
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-
     max-width: 10em;
     max-height: 10em;
     position: relative;
-    top: -24em;
+    top: -23.5em;
+    right: -66em;
+    border: none;
+    background: none;
+
+
 }
 
 
-.oberkörper{
+#oberkörper{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     max-width: 18em;
-    position:relative;
+    position: relative;
     top: -24em;
+    border: none;
+    background: none;
+    right: -0.8em;
 }
-.beine{
+#beine{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -36,6 +43,9 @@ body {font-family: the brooklyn;}
     max-width: 8em;
     position: relative;
     top: -30em;
+    border: none;
+    background: none;
+    right: -0.5em;
 }
 .rechte_hand {
     top: -416em;
@@ -57,34 +67,38 @@ body {font-family: the brooklyn;}
 .notizblock{
     position: relative;
     right: -112em;
-    top: -80em;
+    top: -50em;
     height: 13em;
 
 }
 #gehirn{
     position: relative;
-    top: -71em;
+    top: -66em;
     right: -2em;
     height: 6em;
+    display:none;
 }
 
 #herz{
     position: relative;
-    top: -77em;
+    top: -72em;
     right: -23em;
     height: 5.5em;
+    display:none;
 }
 #lunge{
     position: relative;
-    top: -69em;
+    top: -57em;
     right: -2em;
     height: 5.5em;
+    display:none;
 }
 #nieren{
     position: relative;
     right: -24em;
-    top: -75em;
+    top: -63em;
     height: 5.6em;
+    display:none;
 }
 #gehrindaten{
     border-style: solid;
@@ -114,7 +128,7 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -78em;
+    top: -83em;
     right: -1em;
 }
 
@@ -125,12 +139,12 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -89em;
+    top: -94em;
     right: -27em;
 }
 .patientennotiz{
     position: relative;
-    top: -74em;
+    top: -76em;
     right: -112em;
 }
 #p{
@@ -139,3 +153,7 @@ body {font-family: the brooklyn;}
     right: -22em;
     font-size: 5em;
 }
+
+
+
+
