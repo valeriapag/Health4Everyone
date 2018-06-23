@@ -3,7 +3,7 @@ body {font-family: the brooklyn;}
     position: relative;
     bottom: -30em;
     right: -125em;
-    max-width: 20em;
+    top:26em;
 }
 .center{
     display: block;
