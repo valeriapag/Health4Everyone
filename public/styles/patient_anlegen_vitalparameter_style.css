@@ -2,7 +2,7 @@
     position: relative;
     bottom: 8em;
     right: -114em;
-    top: -59em;
+    top: -30em;
 
 }
 
@@ -62,28 +62,28 @@
 
 #gehirn{
     position: relative;
-    top: -45em;
+    top: -27em;
     right: -2em;
     height: 6em;
  }
 
  #herz{
      position: relative;
-     top: -55em;
+     top: -36em;
      right: -23em;
      height: 5.5em;
  }
  #lunge{
      position: relative;
-     top: -47em;
+     top: -34em;
      right: -2em;
      height: 5.5em;
  }
  #nieren{
      position: relative;
      right: -24em;
-     top: -56em;
-     height: 5.5em;
+     top: -42em;
+     height: 5.5em
  }
 #gehrindaten{
     border-style: solid;
@@ -92,7 +92,7 @@
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -53em;
+    top: -31em;
     right: -1em;
 }
 
@@ -103,7 +103,7 @@
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -64em;
+    top: -42em;
     right: -26em;
 }
 #lungendaten{
@@ -113,7 +113,7 @@
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -56em;
+    top: -39em;
     right: -1em;
 }
 
@@ -124,6 +124,6 @@
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -67em;
+    top: -58em;
     right: -27em;
 }

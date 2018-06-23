@@ -9,33 +9,39 @@
 
 <img src="resources/patient_anlegen.png" id="patient_anlegen" alt="Kategorie Patient anlegen">
 
-<br>
-<br>
-<input type="text" id="vorname" name="vorname" placeholder="Vorname" class="center">
-<br>
-<input type="text" id="nachname" name="nachname" placeholder="Nachname" class="center">
-<br>
-<input type="text" id="email" name="email" placeholder="Email" class="center">
-<br>
-<input type="text" id="geburtstag" name="geburtstag" placeholder="Geburtstag" class="center">
-<br>
-<input type="text" id="krankheit" name="geburtstag" placeholder="Krankheit" class="center">
 
-<form action ="patient_anlegen_vitalparameter.html">
-    <input type="image" id="weiter_button" src="resources/weiter_button.png" alt="weiter button" class="bottom_right">
+
+<form action ="patient_anlegen_vitalparameter.html"method="post">
+    <br>
+    <br>
+    <input type="text" id="vorname" name="vorname" placeholder="Vorname" class="center">
+    <br>
+    <input type="text" id="nachname" name="nachname" placeholder="Nachname" class="center">
+    <br>
+    <input type="text" id="email" name="email" placeholder="Email" class="center">
+    <br>
+    <input type="text" id="geburtstag" name="geburtstag" placeholder="Geburtstag" class="center">
+    <br>
+    <input type="text" id="krankheit" name="geburtstag" placeholder="Krankheit" class="center">
+
+
+    <button style="background: none;border: none;"class="bottom_right"><img src="resources/weiter_button.png" /></button>
+
+
+    <div >
+        <select class="dropdown_geschlehter">
+            <option>weiblich</option>
+            <option>männlich</option>
+            <option>intersexuell</option>
+        </select>
+    </div>
 </form>
 
 
-<p class="center">Bitte Geschlecht auswählen.</p>
 
 
-<div >
-    <select class="dropdown_geschlehter">
-        <option>weiblich</option>
-        <option>männlich</option>
-        <option>intersexuell</option>
-    </select>
-</div>
+
+
 
 </body>
 </html>
