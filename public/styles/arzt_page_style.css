@@ -107,12 +107,7 @@ body {font-family: the brooklyn;}
     top: 6em;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+
 
 .dropdown-content a:hover {background-color: #ddd;}
 
