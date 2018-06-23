@@ -11,7 +11,7 @@
 
 
 
-<form action ="patient_anlegen_vitalparameter.html"method="post">
+<form action ="/patient_anlegen_vitalparameter"method="post">
     <br>
     <br>
     <input type="text" id="vorname" name="vorname" placeholder="Vorname" class="center">
@@ -22,14 +22,14 @@
     <br>
     <input type="text" id="geburtstag" name="geburtstag" placeholder="Geburtstag" class="center">
     <br>
-    <input type="text" id="krankheit" name="geburtstag" placeholder="Krankheit" class="center">
+    <input type="text" id="krankheit" name="krankheit" placeholder="Krankheit" class="center">
 
 
-    <button style="background: none;border: none;"class="bottom_right"><img src="resources/weiter_button.png" /></button>
+    <button type="submit" style="background: none;border: none;" class="bottom_right"><img src="resources/weiter_button.png" /></button>
 
 
     <div >
-        <select class="dropdown_geschlehter">
+        <select class="dropdown_geschlehter" name="geschlecht">
             <option>weiblich</option>
             <option>männlich</option>
             <option>intersexuell</option>
