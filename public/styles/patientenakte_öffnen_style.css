@@ -63,7 +63,7 @@ body {font-family: the brooklyn;}
 }
 #gehirn{
     position: relative;
-    top: -72em;
+    top: -71em;
     right: -2em;
     height: 6em;
 }
@@ -76,14 +76,14 @@ body {font-family: the brooklyn;}
 }
 #lunge{
     position: relative;
-    top: -73em;
+    top: -69em;
     right: -2em;
     height: 5.5em;
 }
 #nieren{
     position: relative;
     right: -24em;
-    top: -79em;
+    top: -75em;
     height: 5.6em;
 }
 #gehrindaten{
@@ -93,7 +93,7 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -86em;
+    top: -81em;
     right: -1em;
 }
 
@@ -104,7 +104,7 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -97em;
+    top: -92em;
     right: -26em;
 }
 #lungendaten{
@@ -114,7 +114,7 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -86em;
+    top: -83em;
     right: -1em;
 }
 
@@ -125,7 +125,7 @@ body {font-family: the brooklyn;}
     border-radius: 5px;
     height: 45px;
     position: relative;
-    top: -97em;
+    top: -94em;
     right: -27em;
 }
 .patientennotiz{

@@ -36,7 +36,7 @@ body {font-family: the brooklyn;}
 }
 
 #bgAnlegen {
-    top: 2%;
+    top: 8em;
     left: 2%;
     float: left;
     display: inline;
@@ -44,9 +44,10 @@ body {font-family: the brooklyn;}
     background: #CC8C15;
     width: 16em;
     height: 22em;
+    position: relative;
 }
 #bgAkte {
-    top: 5%;
+    top: 8em;
     left: 5%;
     float: left;
     display: inline;
@@ -54,6 +55,7 @@ body {font-family: the brooklyn;}
     background: #3D9599;
     height: 22em;
     width: 16em;
+    position: relative;
 }
 #akte{
     top: 3em;
@@ -73,3 +75,50 @@ body {font-family: the brooklyn;}
 
 }
 
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #CC8C15;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    right: -75em;
+    top: 4em;
+    position: relative;
+    width: 8em;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: -74em;
+    top: 4em;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color:#3D9599;
+}

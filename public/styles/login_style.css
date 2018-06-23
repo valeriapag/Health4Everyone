@@ -12,6 +12,15 @@ body {font-family: the brooklyn;}
 #login_button{
     max-width: 19em;
     max-height: 7em;
+    position: relative;
+    top: 3em;
+    padding: 14px 40px;
+    border-radius: 4px;
+    border:none;
+    background-color: #97C1AB;
+    font-size: 1em;
+    font-family: the brooklyn;
+    color: white;
 }
 input[type=text], input[type=password] {
     width: 23em;
@@ -21,11 +30,13 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
     position: relative;
-    right: 0em;
+    right: -60em
 }
 b{
-    text-align:center;
+
     font-family:the brooklyn;
+    right: -50em;
+    position: relative;
 }
 .center2{
     margin: auto;
