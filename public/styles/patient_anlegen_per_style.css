@@ -42,20 +42,15 @@ body {font-family: the brooklyn;}
     border-radius: 1em;
     height: 4em;;
 }
-.position_female_button{
-    position:relative;
-    top: -13em;
-    right: -11em;
+#krankheit{
+    border-style: solid;
+    border-width: medium;
+    border-color: #D8C5A4;
+    border-radius: 1em;
+    height: 4em;;
 }
-.maskulin_position_button{
-    position: relative;
-    top: -2em;
-}
-.position_gemischt_button{
-    position: relative;
-    right: -21em;
-    top: -25em;
-}
+
+
 p{
     color: darkgray;
     position: relative;
@@ -66,3 +61,13 @@ p{
     max-width: 20em;
 }
 
+
+.dropdown_geschlehter{
+    position: relative;
+    right: -30em;
+    background: #CC8C15;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1em;
+    top: -3em;
+}
