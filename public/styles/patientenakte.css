@@ -2,23 +2,17 @@ body {font-family: the brooklyn;}
 .bottom_right {
     position: relative;
     bottom: 8em;
-    top: 29em;
-    right: -117em;
+    top: 46em;
+    right: -114em;
 
 }
 #kopf{
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    max-width: 10em;
-    max-height: 10em;
+    display: block;
     position: relative;
-    top: -23.5em;
-    right: -74em;
+    top: 2.5em;
+    right: -65.9em;
     border: none;
     background: none;
-
 
 }
 
@@ -27,22 +21,20 @@ body {font-family: the brooklyn;}
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    max-width: 18em;
     position: relative;
-    top: -24em;
+    top: 2em;
     border: none;
     background: none;
-    right: -0.8em;
+    right: -0.4em;
 }
 #beine{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    max-width: 8em;
+    width: 10em;
+
     position: relative;
-    top: -30em;
+    top: -4em;
     border: none;
     background: none;
     right: -0.5em;
@@ -73,22 +65,22 @@ body {font-family: the brooklyn;}
 }
 #gehirn{
     position: relative;
-    top: -44em;
+    top: -35em;
     right: -5em;
     height: 6em;
-    display: none;
+    display: none
 }
 
 #herz{
     position: relative;
-    top: -50em;
+    top: -41em;
     right: -23em;
     height: 5.5em;
-    display: none;
+    display: none
 }
 #lunge{
     position: relative;
-    top: -45em;
+    top: -31em;
     right: -5em;
     height: 5.5em;
     display: none;
@@ -96,7 +88,7 @@ body {font-family: the brooklyn;}
 #nieren{
     position: relative;
     right: -24em;
-    top: -50em;
+    top: -37em;
     height: 5.6em;
     display: none;
 }
@@ -147,11 +139,11 @@ body {font-family: the brooklyn;}
     top: -76em;
     right: -112em;
 }
-#p{
+.daten{
     position: relative;
-    top: -6em;
-    right: -22em;
-    font-size: 5em;
+    top: -29em;
+    right: -94em;
+
 }
 
 

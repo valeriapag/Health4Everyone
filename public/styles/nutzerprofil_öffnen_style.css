@@ -38,20 +38,7 @@ body {font-family: the brooklyn;}
     right: -125em;
     max-width: 20em;
 }
-.position_female_button{
-    position:relative;
-    top: -5em;
-    right: -11em;
-}
-.maskulin_position_button{
-    position: relative;
-    top: 6em;
-}
-.position_gemischt_button{
-    position: relative;
-    right: -21em;
-    top: -17em;
-}
+
 .dropbtn {
     background-color: #3D9599;
     color: white;
@@ -99,3 +86,13 @@ body {font-family: the brooklyn;}
     width: 8em;
     left: -18.3em;
 }
+.dropdown_geschlehter{
+    position: relative;
+    right: 0em;
+    background: #3D9599;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1em;
+    top: 0em;
+}
+
