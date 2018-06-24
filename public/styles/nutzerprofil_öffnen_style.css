@@ -3,6 +3,12 @@ body {font-family: the brooklyn;}
     max-width: 20em;
 }
 
+#status {
+    position: relative;
+    top: 30em;
+    left: 30em;
+}
+
 #nutzer_id{
     border-style: solid;
     border-width: medium;
