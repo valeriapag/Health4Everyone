@@ -8,31 +8,30 @@
         <div class="bg_überschrift">
             <p>Nutzer anlegen</p>
         </div>
-        <form class="nutzer_daten">
-            <input name="name" placeholder="Name, Vorname" type="text"><br>
-            <input name="street" placeholder="Straße, Hausnummer" type="text"><br>
-            <input name="dob" placeholder="Geburtsdatum" type="text"><br>
-            <input name="mail" placeholder="Email" type="text"><br>
-            <p class="nutzer_status">Bitte den Nutzerstatus auswählen.</p>
-            <select name="user">
-                <option value="Arzt">Arzt</option>
-                <option value="Patient">Patient</option>
-                <option value="Admin">Admin</option>
-            </select>
-            <p class="nutzer_status">Bitte Geschlecht auswählen.</p>
+        <form class="nutzer_daten" action="/nutzer_anlegen" method="post">
+                <input name="vname" placeholder="Vorname" type="text"><br>
+                <input name="nname" placeholder="Nachname" type="text"><br>
+                <input name="alter" placeholder="Alter" type="text"><br>
+                <input name="email" placeholder="Email" type="text"><br>
+                <p class="nutzer_status">Bitte den Nutzerstatus auswählen.</p>
+                <select name="user">
+                    <option value="Arzt">Arzt</option>
+                    <option value="Admin">Admin</option>
+                </select>
+                <p class="nutzer_status">Bitte Geschlecht auswählen.</p>
 
-        </form>
-        <div >
-            <select class="dropdown_geschlehter" name="geschlecht">
-                <option>weiblich</option>
-                <option>männlich</option>
-                <option>intersexuell</option>
-            </select>
-        </div>
-        <div>
-            <a class="weiter" href="">
-                <img src="resources/weiter_button.png" alt="Der Weiter Button">
-            </a>
-        </div>
+            <div >
+                <select class="dropdown_geschlehter" name="geschlecht">
+                    <option>weiblich</option>
+                    <option>männlich</option>
+                    <option>intersexuell</option>
+                </select>
+            </div>
+            <div>
+                <button class="weiter" type="submit" alt="Der Weiter Button">
+                    <img src="resources/weiter_button.png">
+                <button/>
+            </div>
+    </form>
     </body>
 </html>

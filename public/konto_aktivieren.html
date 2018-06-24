@@ -9,15 +9,11 @@
     <div class="bg_überschrift">
         <p>Konto aktivieren</p>
     </div>
-    <form class="nutzer_daten">
+    <form class="nutzer_daten" method="post" action="/konto_aktivieren">
         <input name="name" placeholder="Benutzername eingeben" type="text"><br>
         <input name="pass" placeholder="Aktivierungspasswort" type="text"><br>
-    </form>
 
-
-        <form action="passwort_anlegen.html">
-
-            <input type="image" id="pw_anlegen_button" src="resources/weiter_button.png" alt="Der Weiter Button">
+        <button type="submit" id="pw_anlegen_button" alt="Der Weiter Button"> <img src="resources/weiter_button.png"> </button>
 
         </form>
 

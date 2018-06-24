@@ -12,19 +12,22 @@
 <br>
 <br>
 <br>
-<input type="text" id="patienten_id" name="patienten_id" placeholder="Patienten ID" class="center">
-<br>
-<input type="text" id="patientenname" name="patientenname" placeholder="Name des Patienten" class="center">
-<form action ="patientenakte_öffnen.html">
-    <input type="image" id="weiter_button" src="resources/button_weiter_blau.png" alt="weiter button" class="bottom_right">
-</form>
+<form action ="/patientenakte_suchen" method="post">
+    <input type="text" id="patienten_id" name="vname" placeholder="Vorname des Patienten" class="center">
+    <br>
+    <input type="text" id="patienten_id" name="nname" placeholder="Nachname des Patienten" class="center">
+    <br>
+    <input type="text" id="patienten_id" name="alter" placeholder="Alter des Patienten" class="center">
 
-<div >
-    <select class="dropdown_geschlehter" name="geschlecht">
+    <button type="submit" id="weiter_button" alt="weiter button" class="bottom_right"> <img src="resources/button_weiter_blau.png"> </button>
+
+
+
+    <select class="dropdown_geschlechter" name="geschlecht">
         <option>weiblich</option>
         <option>männlich</option>
         <option>intersexuell</option>
     </select>
-</div>
+</form>
 </body>
 </html>
