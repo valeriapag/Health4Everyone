@@ -34,9 +34,11 @@ body {font-family: the brooklyn;}
 }
 .bottom_right {
     position: relative;
-    bottom: -40em;
-    right: -125em;
+    bottom: -38em;
+    right: -112em;
     max-width: 20em;
+    border: none;
+    background: none;
 }
 
 .dropbtn {
@@ -85,8 +87,9 @@ body {font-family: the brooklyn;}
     margin-right: auto;
     width: 8em;
     left: -18.3em;
+    top: -10em;
 }
-.dropdown_geschlehter{
+.dropdown_geschlechter{
     position: relative;
     right: 0em;
     background: #3D9599;
