@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Home Screen</title>
+    <link href="./styles/patient_page.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="Patient">
+    <strong>Herr {{vname}} {{nname}}</strong>
+    <p>Patient</p>
+    <div class="bgFoto">
+        <img class="Patientenfoto" src="resources/alfredmüller.png">
+    </div>
+</div>
+<br>
+<br>
+<div id="bgFormular" class="Hintergrund">
+    <img src="./resources/formularausfüllen_bild.png" alt="Der Hintergrund für den Button zum Formular">
+    <button id="formular" type="button">Beschwerden melden</button>
+</div>
+<div id="bgAkte" class="Hintergrund">
+    <img src="./resources/silhouette_patient_weiß.png" alt="Der Hintergrund für den Button zur Patientenakte">
+    <button id="akte" type="button">Patientenakte öffnen</button>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Menü</button>
+    <div class="dropdown-content">
+        <a href="#">Einstellungen</a>
+        <a href="/ausloggen">Ausloggen</a>
+    </div>
+</div>
+</body>
+</html>

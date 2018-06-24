@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Informatiker Home</title>
+    <link href="./styles/informatiker_page_style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!--Startseite/Profil des METI Informatikers-->
+<div class="Informatiker">
+    <strong>{{vname}} {{nname}}</strong>
+    <p>Admin</p>
+    <div class="bg_foto">
+        <img class="informatiker_foto" src="resources/informatiker.png">
+    </div>
+
+
+    <br>
+    <br>
+    <div id="bgAnlegen" class="Hintergrund"><!--Container mit CSS Hintergrundeinstellungen für Nutzer anlegen-->
+        <img src="./resources/silhouette_patient_weiß.png" alt="Der Hintergrund für Nutzer anlegen">
+        <button onClick="location.href='/nutzer_anlegen'" id="nutzer_anlegen" type="button">Nutzer anlegen</button>
+    </div>
+
+    <div id="bgAkte" class="Hintergrund"><!--Container mit CSS Hintergrundeinstellungen für Nutzerakte öffnen-->
+        <img src="./resources/silhouette_patient_weiß.png" alt="Der Hintergrund für den Button zur Nutzerakte">
+        <button onClick="location.href='/nutzerprofil_suchen'" id="akte" type="button">Nutzerprofile öffnen</button>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Menü</button>
+        <div class="dropdown-content">
+            <a href="#">Einstellungen</a>
+            <a href="/ausloggen">Ausloggen</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

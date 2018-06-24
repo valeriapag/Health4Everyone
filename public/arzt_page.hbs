@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arzt Home</title>
+    <link href="./styles/arzt_page_style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div class="Arzt">
+    <strong>Prof. Dr. med. {{nname}}</strong>
+    <p>Fachbereich {{fachbereich}}</p>
+    <div class="bg_foto">
+        <img class="Arztfoto" src="resources/arzt_face.png">
+    </div>
+</div>
+
+
+
+
+<br>
+<br>
+<div id="bgAnlegen" class="Hintergrund"> <!--Container mit CSS Hintergrundeinstellungen für Patienten anlegen-->
+    <img src="./resources/silhouette_patient_weiß.png" alt="Der Hintergrund für Patient anlegen">
+    <form action="/patient_anlegen_per_daten">
+        <button onClick="location.href='/patient_anlegen_per_daten'"  id="patient_anlegen" type="button">Patient anlegen</button>
+    </form>
+</div>
+
+<div id="bgAkte" class="Hintergrund"><!--Container mit CSS Hintergrundeinstellungen für Patientenakte öffnen-->
+    <img src="./resources/silhouette_patient_weiß.png" alt="Der Hintergrund für den Button zur Patientenakte">
+    <button onClick="location.href='/patientenakte_suchen'" id="akte" type="button">Patientenakte öffnen</button>
+</div>
+
+
+
+<div class="dropdown">
+    <button class="dropbtn">Menü</button>
+    <div class="dropdown-content">
+        <a href="#">Einstellungen</a>
+        <a href="/ausloggen">Ausloggen</a>
+    </div>
+</div>
+</body>
+</html>
