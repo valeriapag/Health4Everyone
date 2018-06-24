@@ -8,7 +8,7 @@
 </head>
 <body>
 <img src="resources/patientenakte.png" id="patientenakte" alt="Patientenakte Kategorie">
-<p id="p" class="center">Patienten ID</p>
+
 
 
 <form action="arzt_page.html">
@@ -23,34 +23,29 @@
 
 </div>
 
-
 <div>
 
     <button onclick="showHerLun()" id="oberkörper" ><img src="resources/ober_mit_hand.png"style = "width: 17.5em;"/></button>
 
 </div>
 
-<div>
+<div style= "height: 0em;">
 
     <button onclick="showKidney()" id="beine"><img src="resources/beine.png" style=" width: 8em;"/></button>
 </div>
 
-<div>
-        <textarea rows="4" cols="50" class="notizblock">
-            Notizen
-        </textarea>
-</div>
 
 
-<div class="patientennotiz">
-    <h3>Patientendaten</h3>
-    <b>{{vname}}</b>
-    <b>{{nname}}</b>
-    <b>{{alter}}</b>
-    <b>{{geschlecht}}</b>
-    <b>{{email}}</b>
-    <b>{{krankheit}}</b>
+<div class=" daten">
+    <p> {{Vorname}}</p>
+    <p> {{Nachname}}</p>
+    <p> {{Alter}}</p>
+    <p> {{Geschlecht}}</p>
+    <p> {{Email}}</p>
+    <p> {{Krankheit}}</p>
 </div>
+
+>
 
 <div>
     <img src="resources/gehirn.png" id="gehirn" alt="Gehirn">
