@@ -74,6 +74,12 @@ p {
     position: relative;
     top: -6em;
     left: 64.3em;
+    position: relative;
+    top: -6em;
+    left: 64.3em;
+    border: none;
+    background: none;
+
 }
 
 .weiter img {
@@ -81,7 +87,7 @@ p {
     width: 19em;
 }
 
-.dropdown_geschlehter{
+.dropdown_geschlechterhter{
     position: relative;
     right: -21em;
     background: #CC8C15;
