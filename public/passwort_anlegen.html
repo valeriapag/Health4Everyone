@@ -9,14 +9,12 @@
 <div class="bg_überschrift">
     <p>Konto aktivieren</p>
 </div>
-<form class="passwort_daten">
+<form class="passwort_daten" method="post" action="/passwort_anlegen">
     <input name="pass_vergeben" placeholder="Neues Passwort vergeben" type="text"><br>
     <input name="repeat_pass" placeholder="Passwort wiederholen" type="text"><br>
-</form>
-<div>
-    <form class="bestätigen" action="/passwort_anlegen" method="post">
+    <div class="bestätigen">
         <button alt="Der Bestätigen Button" type="submit"> <img src="resources/bestätigen_button.png"> </button>
-    </form>
-</div>
+    </div>
+</form>
 </body>
 </html>
