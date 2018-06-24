@@ -5,8 +5,8 @@ body {font-family: the brooklyn;}
 
 #status {
     position: relative;
-    top: 30em;
-    left: 30em;
+    top: -10em;
+    left: 8em;
 }
 
 #nutzer_id{
@@ -92,7 +92,7 @@ body {font-family: the brooklyn;}
     margin-left: auto;
     margin-right: auto;
     width: 8em;
-    left: -18.3em;
+    left: -17.3em;
     top: -10em;
 }
 .dropdown_geschlechter{
