@@ -6,6 +6,7 @@
     <link href="styles/patientenakte.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<!-- Übersicht der Patientendaten (Patientenakte)-->
 <img src="resources/patientenakte.png" id="patientenakte" alt="Patientenakte Kategorie">
 
 
@@ -35,7 +36,7 @@
 </div>
 
 
-<div class=" daten">
+<div class=" daten"> <!-- Vorname, Nachname, Alter, Geschlecht, Email und Krankheit des Patienten wird dynamisch generiert-->
     <p> {{vname}}</p>
     <p> {{nname}}</p>
     <p> {{alter}}</p>
@@ -48,25 +49,25 @@
     <div id="gehirn">
         <img src="resources/gehirn.png"  alt="Gehirn">
         <br>
-        <p id="GW">{{EEG}} Hertz</p>
+        <p id="GW">{{EEG}} Hertz</p> <!-- Vitalparameter EEG wird dynamisch generiert.-->
     </div>
 
     <div id="herz">
         <img src="resources/herz.png" alt="Herz">
         <br>
-        <p id="HW">{{EKG}} mm/s</p>
+        <p id="HW">{{EKG}} mm/s</p><!-- Vitalparameter EKG wird dynamisch generiert.-->
     </div>
 
     <div id="lunge">
         <img src="resources/lungen.png" id="lunge" alt="Lunge">
         <br>
-        <p id="LW">{{LVolumen}} mm³</p>
+        <p id="LW">{{LVolumen}} mm³</p><!-- Vitalparameter Lungenvolumen wird dynamisch generiert.-->
     </div>
 
     <div id="nieren">
         <img src="resources/nieren.png" id="nieren" alt="Niere">
         <br>
-        <p id="NW">{{GGT}} U/I</p>
+        <p id="NW">{{GGT}} U/I</p><!-- Vitalparameter GGT wird dynamisch generiert.-->
     </div>
 </div>
 </body>
