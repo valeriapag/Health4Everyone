@@ -66,7 +66,7 @@ app.post("/login_page", function(req, res) {
         }
         else {
             MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
-                //Fehler wird abgefangen
+                //Fehler wird abgefangen (z.B.: Rejected Promise)
                 try {
                     //Erstelle Variable zum Zugriff auf Db für spätere Operationen
                     ourdb = await db.db("Ourdb");
@@ -165,14 +165,22 @@ app.post("/login_page", function(req, res) {
     }
 });
 
+/*
+    Handler fuer Post Anfrage beim Anlegen eines Patienten
+    - Wenn alle Felder angegeben -> Lege Patient mit den Werten an, leite zu /patient_anlegen_vitalparameter weiter
+    und speichere die patientID in der Session des Arztes
+    - Wenn nicht alle Felder angegeben -> Leite zur arzt_page zurueck
+ */
 app.post("/patient_anlegen_per_daten", function(req, res) {
+    //Stelle Verbindung mit Mongodb her
     MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
         try {
+            ourdb = await db.db("Ourdb");
             if (req.body.nachname && req.body.vorname && req.body.email
                 && req.body.alter && req.body.geschlecht && req.body.krankheit) {
-                var uName = req.body.vname[0].toLowerCase() + req.body.nname;
-                var patient_id = uniqid(),
-                    patientNew = {
+                var uName = await req.body.vorname.charAt(0).toLowerCase() + req.body.nachname;
+                var patient_id = await uniqid(),
+                    patientNew = await {
                         'patientID': patient_id,
                         'vname': req.body.vorname,
                         'nname': req.body.nachname,
@@ -189,38 +197,12 @@ app.post("/patient_anlegen_per_daten", function(req, res) {
                         'arztID': req.session.UID,
                         'beschwerdeID': null
                     };
-                ourdb = db.db('Ourdb');
-                await ourdb.patient.insertOne(patientNew);
+                await ourdb.collection('patient').insertOne(patientNew, function(err, result) {
+                    console.log("Patient angelegt durch Arzt");
+                });
                 req.session.currPatient = patient_id;
                 console.log('PATIENT ANLEGEN TEIL 1');
-                await res.render('arzt_page', req.session.daten);
-            }
-            else {
-                await res.render('arzt_page', req.session.daten);
-            }
-            await db.close();
-        }
-        catch (error) {
-            throw error;
-        }
-    });
-});
-
-app.post("/patient_anlegen_vitalparameter", function(req, res) {
-    MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
-        try {
-            if (req.body.gehirndaten && req.body.herzdaten && req.body.lungendaten && req.body.nierendaten) {
-                var patient_id = req.session.currPatient;
-                ourdb = db.db('Ourdb');
-                var pd_update = await {
-                    'EEG' : req.body.gehirndaten,
-                    'EKG' : req.body.herzdaten,
-                    'LVolumen' : req.body.lungendaten,
-                    'GGT' : req.body.nierendaten
-                };
-                await ourdb.patient.update({'patientID': patient_id}, pd_update);
-                console.log('PATIENT ANLEGEN TEIL 2');
-                await res.render('arzt_page', req.session.daten);
+                await res.redirect('patient_anlegen_vitalparameter');
             }
             else {
                 await res.render('arzt_page', req.session.daten);
@@ -234,17 +216,61 @@ app.post("/patient_anlegen_vitalparameter", function(req, res) {
 });
 
 /*
-
+    Zweiter Teil (Post Handler) beim Anlegen eines Patienten, nach /patient_anlegen_per_daten.
+    - Wenn alle Vitalwerte angegeben -> speichere Patient mit patientID aus der Session und setze die gespeicherte
+    patientID bei der Session auf null.
+    - Wenn nicht alle Werte angegeben -> lösche Patient und setze die patientID in der Session wieder auf null. Leite
+    dann zur arzt_page zurueck.
  */
+app.post("/patient_anlegen_vitalparameter", function(req, res) {
+    MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
+        //Fange Fehler (z.B.: Rejected Promise) ab
+        try {
+            ourdb = await db.db('Ourdb');
+            var patient_id = req.session.currPatient;
+            if (req.body.gehirndaten && req.body.herzdaten && req.body.lungendaten && req.body.nierendaten) {
+                var pd_update = await {
+                    'EEG' : req.body.gehirndaten,
+                    'EKG' : req.body.herzdaten,
+                    'LVolumen' : req.body.lungendaten,
+                    'GGT' : req.body.nierendaten
+                };
+                await ourdb.collection('patient').update({'patientID': patient_id}, {$set: pd_update});
+                req.session.currPatient = await null;
+                console.log('PATIENT ANLEGEN TEIL 2');
+                await res.render('arzt_page', req.session.daten);
+            }
+            else {
+                await ourdb.collection('patient').deleteOne({'patientID' : patient_id}, function(err, result) {
 
+                });
+                req.session.currPatient = await null;
+                console.log('Patient wieder gelöscht');
+                await res.render('arzt_page', req.session.daten);
+            }
+            //Schliesse Verbindung zur Datenbank
+            await db.close();
+        }
+        catch (error) {
+            throw error;
+        }
+    });
+});
+
+/*
+    Handler fuer die Post Anfrage zum Nutzer anlegen (vom Meti ausgefuehrt)
+    - Wenn alle Felder ausgefuellt (fachbereich muss nur bei Anlegen eines Arztes ausgefuellt sein)
+    -> Pruefe ob Admin oder Arzt als Usertyp ausgewaehlt wurde und speichere die Werte dann in der Datenbank
+    - Wenn nicht alle Felder ausgefuellt -> Redirect zurueck zur meti_page ohne Speichern des Nutzers
+ */
 app.post("/nutzer_anlegen", function(req, res) {
     MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
         try {
             ourdb = await db.db('Ourdb');
-            if (req.body.nachname && req.body.vorname && req.body.email
+            if (req.body.nname && req.body.vname && req.body.email
                 && req.body.alter && req.body.geschlecht && req.body.user) {
+                var uName = req.body.vname.charAt(0).toLowerCase() + req.body.nname;
                 if (req.body.user === 'Admin') {
-                    var uName = req.body.vname[0].toLowerCase() + req.body.nname;
                     var meti_id = uniqid(),
                         metiNew = {
                             'metiID': meti_id,
@@ -256,11 +282,11 @@ app.post("/nutzer_anlegen", function(req, res) {
                             'uname': uName,
                             'pwHash': null
                         };
+                    ourdb.collection('meti').insertOne(metiNew);
                     console.log('METI ANGELEGT');
                     await res.render('meti_page', req.session.daten);
                 }
                 else if (req.body.user === 'Arzt' && req.body.fachbereich) {
-                    var uName = req.body.vname[0].toLowerCase() + req.body.nname;
                     var arzt = uniqid(),
                         arztNew = {
                             'arztID': arzt_id,
@@ -273,17 +299,208 @@ app.post("/nutzer_anlegen", function(req, res) {
                             'uname': uName,
                             'pwHash': null
                         };
+                    ourdb.collection('arzt').insertOne(arztNew);
+                    console.log('ARZT ANGELEGT');
+                    await res.render('meti_page', req.session.daten);
                 }
             }
             else {
                 await res.render('meti_page', req.session.daten);
             }
+            //Schliesse Verbindung zur Datenbank
             await db.close();
         }
         catch (error) {
             throw error;
         }
     });
+});
+
+/*
+    Post Handler fuer Anfragen zum Suchen eines Patienten (durch den Meti)
+    - Wenn alle Werte angegeben -> leite weiter zur Patientenakte
+    - Wenn nicht -> leite zurueck zur arzt_page
+ */
+app.post("/patientenakte_suchen", function(req, res) {
+    MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
+        //Fange Fehler (z.B.: Rejected Promise) ab
+        try {
+            ourdb = await db.db('Ourdb');
+            if (req.body.vname && req.body.nname && req.body.alter) {
+                var search = await {
+                    'vname' : req.body.vname,
+                    'nname' : req.body.nname,
+                    'alter' : req.body.alter
+                };
+                var patientFound = await ourdb.collection('patient').find(search).toArray();
+                patientFound = patientFound[0];
+                console.log(patientFound);
+                console.log('PATIENT GESUCHT');
+                await res.render('patientenakte', patientFound);
+            }
+            else {
+                console.log('PATIENT NICHT GESUCHT');
+                await res.render('arzt_page', req.session.daten);
+            }
+            //Schliesse Verbindung zur Datenbank
+            await db.close();
+        }
+        catch (error) {
+            throw error;
+        }
+    });
+});
+
+/*
+    Post Handler fuer Anfragen zur Kontoaktivierung
+    - Wenn alle Werte angegeben -> leite weiter zur Patientenakte
+    - Wenn nicht -> leite zurueck zur arzt_page
+ */
+app.post("/konto_aktivieren", function(req, res) {
+    MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
+        //Fange Fehler (z.B.: Rejected Promise) ab
+        try {
+            ourdb = await db.db('Ourdb');
+            if (req.body.name && req.body.pass) {
+                console.log(req.body.name + ' ' + req.body.pass);
+                var search = {
+                    'uname' : String(req.body.name),
+                    'aktPW' : String(req.body.pass)
+                };
+                var aktivierungDoc = await ourdb.collection('aktivierung').find({
+                    'uname' : String(req.body.name),
+                    'aktPW' : String(req.body.pass)
+                }).toArray();
+                aktivierungDoc = aktivierungDoc.length;
+                if (await aktivierungDoc >= 1) {
+                    console.log('Starte Aktivierungsvorgang');
+                    var countPatient = await ourdb.collection('patient').find(
+                        { 'uname' : req.body.name }).count();
+                    //var countPatient = patient.count();
+                    var countMeti = await ourdb.collection('meti').find(
+                        { 'uname' : req.body.name }).count();
+                    //var countMeti = meti.count();
+                    var countArzt = await ourdb.collection('arzt').find(
+                        { 'uname' : req.body.name }).count();
+                    //var countArzt = arzt.count();
+                    if (countPatient >= 1) {
+                        var patient = await ourdb.collection('patient').find(
+                            { 'uname' : req.body.name }).toArray();
+                        patient = patient[0];
+                        req.session.currAkt = patient.patientID;
+                        req.session.statusAkt = 'patient';
+                        await res.redirect('/passwort_anlegen');
+                    }
+                    else if (countMeti >= 1) {
+                        var meti = await ourdb.collection('meti').find(
+                            { 'uname' : req.body.name }).toArray();
+                        console.log('Aktiviere als meti');
+                        meti = meti[0];
+                        req.session.currAkt = meti.metiID;
+                        req.session.statusAkt = 'meti';
+                        await res.redirect('/passwort_anlegen');
+                    }
+                    else if (countArzt >= 1) {
+                        var arzt = await ourdb.collection('arzt').find(
+                            { 'uname' : req.body.name }).toArray();
+                        arzt = arzt[0];
+                        req.session.currAkt = arzt.arztID;
+                        req.session.statusAkt = 'arzt';
+                        await res.redirect('/passwort_anlegen');
+                    }
+                }
+                else {
+                    console.log('AKTIVIERUNG NICHT GEFUNDEN')
+                    await res.redirect('/');
+                }
+            }
+            else {
+                console.log('NICHT GENUG DATEN FUER AKTIVIERUNG');
+                await res.redirect('/');
+            }
+            //Schliesse Verbindung zur Datenbank
+            await db.close();
+        }
+        catch (error) {
+            throw error;
+        }
+    });
+});
+
+/*
+    Post Handler fuer Anfragen zum Suchen eines Patienten (durch den Meti)
+    - Wenn alle Werte angegeben -> leite weiter zur Patientenakte
+    - Wenn nicht -> leite zurueck zur arzt_page
+ */
+app.post("/passwort_anlegen", function(req, res) {
+    MongoClient.connect('mongodb://127.0.0.1:27017/Ourdb', async function (error, db) {
+        //Fange Fehler (z.B.: Rejected Promise) ab
+        try {
+            ourdb = await db.db('Ourdb');
+            if (req.body.pass_vergeben && req.body.repeat_pass) {
+                if (req.body.pass_vergeben == req.body.repeat_pass) {
+                    var idType = await String(req.session.statusAkt) + 'ID';
+                    var id = String(req.session.currAkt);
+                    var query;
+                    switch(idType) {
+                        case 'metiID':
+                            query = {
+                                'metiID' : id
+                            };
+                            break;
+                        case 'arztID':
+                            query = {
+                                'metiID' : id
+                            };
+                            break;
+                        case 'patientID':
+                            query = {
+                                'patientID' : id
+                            };
+                            break;
+                    }
+
+                    var pwHASH = await String(crypto.createHash('md5').update(String(req.body.pass_vergeben)).digest('hex'));
+                    await ourdb.collection(String(req.session.statusAkt)).update(query,
+                        {$set : {'pwHash' : pwHASH}}, function(err, result) {
+                            console.log(pwHASH);
+                        });
+                    req.session.statusAkt = await null;
+                    req.session.currAkt = await null;
+                    await res.redirect('/login_page');
+                }
+                else {
+                    console.log('PASSWOERTER STIMMEN NICHT UEBEREIN');
+                    await res.redirect('/');
+                }
+            }
+            else {
+                console.log('PASSWORTFELDER NICHT AUSGEFUELLT');
+                await res.redirect('/');
+            }
+            //Schliesse Verbindung zur Datenbank
+            await db.close();
+        }
+        catch (error) {
+            throw error;
+        }
+    });
+});
+
+/*
+    Handler fuer ein GET request auf die konto_aktivieren Seite
+ */
+app.get("/konto_aktivieren", function(req, res) {
+    res.sendFile(__dirname + '/secure/konto_aktivieren.html');
+    console.log('Verbunden');
+});
+
+/*
+    Handler fuer ein GET request auf die passwort_anlegen Seite
+ */
+app.get("/passwort_anlegen", function(req, res) {
+    res.sendFile(__dirname + '/secure/passwort_anlegen.html');
+    console.log('Verbunden');
 });
 
 /*
@@ -300,9 +517,21 @@ app.get("/", function(req, res) {
     console.log('Verbunden');
 });
 
-//Handler fuer die login_page
+//Handler fuer GET Anfrage der login_page
 app.get("/login_page", function(req, res) {
     res.sendFile(__dirname + '/secure/login_page.html');
+    console.log('Verbunden');
+});
+
+//Handler fuer GET Anfrage der Seite zum Suchen von Patientenakten (durch den Arzt)
+app.get("/patientenakte_suchen", function(req, res) {
+    res.sendFile(__dirname + '/secure/patientenakte_suchen.html');
+    console.log('Verbunden');
+});
+
+//Handler fuer GET Anfrage der Seite zum Suchen von Patientenakten (durch den Arzt)
+app.get("/arzt_page", function(req, res) {
+    res.render('arzt_page', req.session.daten);
     console.log('Verbunden');
 });
 
@@ -332,8 +561,20 @@ app.get("/ausloggen", function(req, res) {
     console.log('Verbunden');
 });
 
+//Handler fuer die Seiten zum Anlegen von Nutzern
+
 app.get("/patient_anlegen_per_daten", function(req, res) {
     res.sendFile(__dirname + '/secure/patient_anlegen_per_daten.html');
+    console.log('Verbunden');
+});
+
+app.get("/patient_anlegen_vitalparameter", function(req, res) {
+    res.sendFile(__dirname + '/secure/patient_anlegen_vitalparameter.html');
+    console.log('Verbunden');
+});
+
+app.get("/nutzer_anlegen", function(req, res) {
+    res.sendFile(__dirname + '/secure/nutzer_anlegen.html');
     console.log('Verbunden');
 });
 
