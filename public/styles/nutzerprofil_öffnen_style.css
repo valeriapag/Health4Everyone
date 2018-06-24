@@ -3,6 +3,12 @@ body {font-family: the brooklyn;}
     max-width: 20em;
 }
 
+#status {
+    position: relative;
+    top: -10em;
+    left: 8em;
+}
+
 #nutzer_id{
     border-style: solid;
     border-width: medium;
@@ -34,9 +40,11 @@ body {font-family: the brooklyn;}
 }
 .bottom_right {
     position: relative;
-    bottom: -40em;
-    right: -125em;
+    bottom: -38em;
+    right: -112em;
     max-width: 20em;
+    border: none;
+    background: none;
 }
 
 .dropbtn {
@@ -84,9 +92,10 @@ body {font-family: the brooklyn;}
     margin-left: auto;
     margin-right: auto;
     width: 8em;
-    left: -18.3em;
+    left: -17.3em;
+    top: -10em;
 }
-.dropdown_geschlehter{
+.dropdown_geschlechter{
     position: relative;
     right: 0em;
     background: #3D9599;

@@ -11,32 +11,23 @@
 <br>
 <br>
 <br>
-<input type="text" id="nutzer_id" name="nutzer_id" placeholder="Nutzer ID" class="center">
-<br>
+<form action="/nutzerprofil_suchen" method="post">
+    <input type="text" id="nutzer_id" name="nutzer_id" placeholder="Nutzer ID" class="center">
+    <br>
+    <button type="submit" id="weiter_button" alt="weiter button" class="bottom_right"> <img src="resources/button_weiter_blau.png"> </button>
 
-<form>
-    <input type="image" id="weiter_button" src="resources/button_weiter_blau.png" alt="weiter button" class="bottom_right">
+    <p class = center id="status">Status Nutzer bitte auswählen.</p>
+    <div class="dropdown" id="center">
+        <div>
+            <select name="status" class="dropdown_geschlechter" >
+                <option>Arzt</option>
+                <option>Patient</option>
+                <option>Meti</option>
+            </select>
+        </div>
+    </div>
+    <br>
 </form>
-<p class = center>Status Nutzer bitte auswählen.</p>
-<div class="dropdown" id="center">
-    <div >
-        <select class="dropdown_geschlehter" >
-            <option>Arzt</option>
-            <option>Patient</option>
-            <option>Meti</option>
-        </select>
-    </div>
-</div>
-<br>
-<div class="center">
-    <div >
-        <select class="dropdown_geschlehter" name="geschlecht">
-            <option>weiblich</option>
-            <option>männlich</option>
-            <option>intersexuell</option>
-        </select>
-    </div>
-
 </div>
 </body>
 </html>
