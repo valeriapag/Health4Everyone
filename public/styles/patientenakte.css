@@ -73,32 +73,32 @@ body {font-family: the brooklyn;}
 }
 #gehirn{
     position: relative;
-    top: -66em;
-    right: -2em;
+    top: -44em;
+    right: -5em;
     height: 6em;
-    display:none;
+    display: none;
 }
 
 #herz{
     position: relative;
-    top: -72em;
+    top: -50em;
     right: -23em;
     height: 5.5em;
-    display:none;
+    display: none;
 }
 #lunge{
     position: relative;
-    top: -57em;
-    right: -2em;
+    top: -45em;
+    right: -5em;
     height: 5.5em;
-    display:none;
+    display: none;
 }
 #nieren{
     position: relative;
     right: -24em;
-    top: -63em;
+    top: -50em;
     height: 5.6em;
-    display:none;
+    display: none;
 }
 #gehrindaten{
     border-style: solid;
