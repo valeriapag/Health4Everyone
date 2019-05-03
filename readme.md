@@ -15,5 +15,3 @@ so wenig Konflikte wie möglich zu haben!
 4. (Testen ob der behobene Konflikt funktioniert)
 5. Push
 
-## Software
-Ich verwende für HTML/CSS/JS die Webstorm <https://www.jetbrains.com/webstorm/?fromMenu> für Studenten ist das kostenlos und man muss jährlich seine Lizenz erneuern. Falls ihr andere Tools haben wollt oder besser findet einfach bescheid geben. :)
